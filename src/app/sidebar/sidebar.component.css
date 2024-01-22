@@ -1,0 +1,28 @@
+.side--bar{
+    width: 100%;
+    background-color:black;
+    margin: 10px 0px;
+    padding: 20px;
+    min-height: calc(100vh - 20px);
+    border-radius: 0.5rem;
+    align-items: center;
+}
+
+.side--bar--up{
+    margin: 0 25px;
+}
+
+.mit--logo{
+    width: 100%;
+    height: auto;
+}
+
+.side--bar--down{
+    width: 100%;
+    border-top: #E5E4E2 1.5px solid;
+    padding: 20px;
+}
+
+.card{
+    align-items: center;
+}

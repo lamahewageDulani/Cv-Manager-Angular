@@ -1,0 +1,14 @@
+H1, H3{
+    padding: 20px;
+    color: #0070ff;
+}
+
+.btn--div{
+    color: #2190ff;
+    border-top: 1.5px #e4e4e4 solid;
+}
+
+.login--form{
+    padding: 0 300px;
+}
+

@@ -1,0 +1,32 @@
+@import '~ag-grid-community/styles/ag-grid.css';
+@import '~ag-grid-community/styles/ag-theme-alpine.css';
+
+H1, H3{
+    padding: 20px;
+    color: #0070ff;
+}
+
+th{
+    padding-inline: 20px;
+}
+
+th, td{
+    align-items: start;
+}
+
+table{
+    font-size:smaller;
+}
+
+.input--fields{
+    display: flex;
+    align-items: start;
+    margin: 5px 0;
+}
+
+.single--input{
+    margin-right: 5px;
+    border-radius: 1dvh;
+    border-width: 1px;
+    max-width: 80px;
+}

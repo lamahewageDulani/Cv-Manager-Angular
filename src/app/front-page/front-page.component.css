@@ -1,0 +1,35 @@
+.col-9{
+    /* background-color: bisque; */
+    height: 100%;
+    overflow-y: auto;
+}
+
+.col-3{
+    /* background-color: blueviolet; */
+    height: 100%;
+}
+
+.container-fluid{
+    background-color: #e4e4e4;
+}
+
+.card{
+    overflow: hidden;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px;
+    min-height: calc(100vh - 20px);
+    border-radius: 0.5rem;
+    /* align-items: center;  */
+}
+
+/* .fixed-sidebar {
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+} */
+
+/* .overflow-auto {
+    overflow-y: auto;
+    height: 100%;
+} */

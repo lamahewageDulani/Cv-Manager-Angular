@@ -1,0 +1,17 @@
+.list-group-item{
+    border: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.card--list{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icon{
+    color: #0070ff;
+}

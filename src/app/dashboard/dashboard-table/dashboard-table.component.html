@@ -1,0 +1,24 @@
+<ag-grid-angular
+    style="width: 100%; height: 400px; margin: 0; box-sizing: border-box; -webkit-overflow-scrolling: touch;
+    text-align-last: left;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="colDefs">
+</ag-grid-angular>
+
+<table *ngIf="userDataa.length > 0">
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Is a User</th>
+            <th>Full Name</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of userDataa">
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ YesNo(item.isUser) }}</td>
+            <td>{{ item.fullName }}</td>
+        </tr>
+    </tbody>
+</table>

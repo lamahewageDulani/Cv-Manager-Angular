@@ -1,0 +1,27 @@
+<div>
+    <div>
+        <H1>CV Management</H1>
+    </div>
+    <div class="login--form">
+        <form>
+            <H3>Login</H3>
+            <div class="content">
+                <div class="mb-4">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                </div>
+                <div class="mb-4">
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div id="emailHelp" class="form-text pb-3">Forgot Password?</div>
+                <div>
+                    <button type="submit" class="btn btn-primary m-3">Sign In</button>
+                </div>
+                <div class="btn--div">
+                    <router-outlet name="sidebar"></router-outlet>
+                    <button type="submit" class="btn btn-danger m-3" [routerLink]="['/Dashboard']">Login as an Employee</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

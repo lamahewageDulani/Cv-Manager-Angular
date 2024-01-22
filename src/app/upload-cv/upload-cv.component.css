@@ -1,0 +1,14 @@
+H1, H3{
+    padding: 20px;
+    color: #0070ff;
+}
+
+.register--form{
+    padding: 0 40px;
+    font-size: 2.3dvh;
+}
+
+.col-sm-2{
+    text-align: end;
+}
+
