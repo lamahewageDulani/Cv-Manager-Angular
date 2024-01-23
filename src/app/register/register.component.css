@@ -7,3 +7,17 @@ H1, H3{
     padding: 0 30px;
     font-size: 2.3dvh;
 }
+
+.col-sm-2{
+    text-align: end;
+}
+
+input{
+    font-size: 2.3dvh;
+}
+
+@media (max-width:768px){
+    .col-sm-2{
+        text-align: start;
+    }
+}
