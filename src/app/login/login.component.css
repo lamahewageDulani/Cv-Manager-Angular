@@ -9,6 +9,19 @@ H1, H3{
 }
 
 .login--form{
-    padding: 0 300px;
+    padding: 0 150px;
 }
 
+/* For Mobile*/
+@media (min-width:426px) and (max-width:768px){
+    .login--form{
+        padding: 0px 80px;
+    }
+}
+
+/* For Mobile*/
+@media (max-width:425px){
+    .login--form{
+        padding: 0px;
+    }
+}

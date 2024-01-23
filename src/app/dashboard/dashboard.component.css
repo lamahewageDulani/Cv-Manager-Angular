@@ -11,7 +11,7 @@ th{
 }
 
 th, td{
-    align-items: start;
+    align-items: flex-start;
 }
 
 table{
@@ -20,13 +20,27 @@ table{
 
 .input--fields{
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     margin: 5px 0;
 }
+
+
 
 .single--input{
     margin-right: 5px;
     border-radius: 1dvh;
     border-width: 1px;
     max-width: 80px;
+}
+
+@media (max-width:425px){
+    .inputs{
+        align-items: left;
+        justify-content: left;
+    }
+    .single--input{
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 5px;
+    }
 }

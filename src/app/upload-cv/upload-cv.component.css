@@ -4,7 +4,7 @@ H1, H3{
 }
 
 .register--form{
-    padding: 0 40px;
+    padding: 0 5px;
     font-size: 2.3dvh;
 }
 
@@ -12,3 +12,20 @@ H1, H3{
     text-align: end;
 }
 
+input{
+    font-size: 2.3dvh;
+}
+
+/* For Tablet*/
+@media (min-width:426px) and (max-width:768px){
+    .col-sm-2{
+        text-align: start;
+    }
+}
+
+/* For Mobile*/
+@media (max-width:425px){
+    .col-sm-2{
+        text-align: start;
+    }
+}

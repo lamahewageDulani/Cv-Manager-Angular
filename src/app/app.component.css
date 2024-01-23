@@ -1,3 +1,9 @@
+
+.row{
+    display: flex;
+    flex-shrink: 0;
+}
+
 .col-9{
     /* background-color: bisque; */
     height: 100%;
@@ -14,6 +20,7 @@
 }
 
 .card{
+    flex-shrink: 0;
     overflow: hidden;
     width: 100%;
     margin: 10px 0px;
@@ -23,34 +30,67 @@
     /* align-items: center;  */
 }
 
+.offcanvas{
+    background-color: transparent;
+    border: none;
+    width: 230px;
+}
+
+.offcanvas-body {
+    padding: 0px 0px;
+    border-width: 0px;
+    background-color: #fff;
+    min-height: calc(100vh - 50px);
+}
+
+.navbar-toggler{
+    margin-left: 10px;
+}
+
+.close-button{
+    padding: 3px 10px;
+    display: flex;
+    align-items: end;
+}
+
 /* For Desktop*/
 @media (min-width:769px){
-    .container-fluid{
+    /* .container-fluid{
         background-color: aqua;
+    } */
+    .navbar{
+        display: none;
     }
 }
 
 /* For Tablet*/
 @media (min-width:426px) and (max-width:768px){
-    .col-.container-fluid{
+    /* .container-fluid{
         background-color: bisque;
+    } */
+    .col-3{
+        display: none;
+    }
+    .col-9{
+        width: 100%;
+    }
+    .card{
+        margin-top: 70px;
     }
 }
 
 /* For Mobile*/
 @media (max-width:425px){
-    .container-fluid{
+    /* .container-fluid{
         background-color: blueviolet;
+    } */
+    .col-3{
+        display: none;
+    }
+    .col-9{
+        width: 100%;
+    }
+    .card{
+        margin-top: 70px;
     }
 }
-
-/* .fixed-sidebar {
-    position: fixed;
-    height: 100%;
-    overflow-y: auto;
-} */
-
-/* .overflow-auto {
-    overflow-y: auto;
-    height: 100%;
-} */

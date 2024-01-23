@@ -6,7 +6,7 @@
   <form [formGroup]="formVar" (ngSubmit)="onSubmit()">
   <div class="register--form">
     <div class="mb-1 row align-items-center">
-      <label class="col-sm-2 col-form-label" style="text-align: end;">Full Name:</label>
+      <label class="col-sm-2 col-form-label">Full Name:</label>
       <div class="col">
         <input type="text" class="form-control" placeholder="First Name" formControlName="firstname" />
       </div>
@@ -68,7 +68,7 @@
       </div>
     </div>
     <div class="mb-1 row">
-      <div class="col">
+      <div class="col align-items-center">
         <input type="file" class="file-upload" onchange="console.log(event.target.files)">
       </div>
     </div>

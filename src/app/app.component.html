@@ -1,6 +1,7 @@
+
 <div class="container-fluid">
     <div class="row">
-        <div class="col-3 shrink-0 fixed">
+        <div class="col-3">
             <app-sidebar></app-sidebar>            
         </div>
         <div class="col-9 text-center">
@@ -12,6 +13,19 @@
         </div>
     </div>
 </div>
+<nav class="navbar bg-body-tertiary fixed-top">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-body full-height">
+        <div class="close-button">
+          <button type="button" class="btn btn-close ms-auto btn-close-bg-danger" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <app-sidebar></app-sidebar>
+      </div>
+    </div>
+</nav>
 
 <!-- <button [routerLink]="['/FrontPagee']">Millenium IT</button>
 <router-outlet></router-outlet> -->

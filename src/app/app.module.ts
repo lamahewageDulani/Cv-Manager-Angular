@@ -17,6 +17,7 @@ import { FrontPageComponent } from './front-page/front-page.component'; // Colum
 import { CommonModule } from '@angular/common';
 import { SidebarContentComponent } from './sidebar/sidebar-content/sidebar-content.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   { path: 'Login', component: LoginComponent },
@@ -48,7 +49,8 @@ const routes: Routes = [
     AgGridModule,
     ReactiveFormsModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
