@@ -13,6 +13,7 @@ interface IRow {
 }
 
 interface userData {
+[x: string]: any;
   id: number;
   isUser: boolean;
   fullName: string;
@@ -29,16 +30,6 @@ export class DashboardTableComponent {
 
   userDataa: userData[] = [];
   filteredData = [];
-
-  @Input()
-  fullname1: string = '';
-  onSearch() {
-    if (this.fullname1 !== '') {
-        this.filteredData = this.userDataa.filter(item => item.fullName.toLowerCase().includes(this.fullname1.toLowerCase()));
-    } else {
-        this.filteredData = this.userDataa;
-    }
-}
 
   fetchUserData() {
     this.http.get<userData[]>('https://api-generator.retool.com/4v1405/data')
@@ -104,5 +95,14 @@ export class DashboardTableComponent {
     { field: 'successful' },
     { field: 'rocket' },
   ];
+
+  @Input()
+  fullname1: string = "";
+
+  @Input()
+  userId1: string = "";
+
+  @Input()
+  isUser1: boolean = false;
 
 }

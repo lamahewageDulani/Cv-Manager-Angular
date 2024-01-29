@@ -1,4 +1,4 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { NgModel } from '@angular/forms';
 
 @Component({
@@ -9,11 +9,7 @@ import { NgModel } from '@angular/forms';
 export class DashboardComponent {
   
   fullname: string = "";
+  userId: string = ""; 
+  isUser: boolean = false;
 
-  onSearchTextChange: EventEmitter<string> = new EventEmitter<string>();
-
-  onSearch(){
-    this.onSearchTextChange.emit(this.fullname);
-    console.log(this.fullname);
-  }
 }
