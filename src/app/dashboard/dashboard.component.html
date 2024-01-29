@@ -4,12 +4,13 @@
 <H3>Dashboard</H3>
 <div class="input--fields">
   <div class="inputs">
-    <input class="single--input" placeholder="First Name">
-    <input class="single--input" placeholder="Last Name">
+    <input class="single--input" placeholder="User ID">
+    <input class="single--input" placeholder="Is User">
   </div>
   <div class="inputs">
-    <input class="single--input" placeholder="Position">
-    <input class="single--input" placeholder="Status">
+    <input [(ngModel)]="fullname" (input)="onSearch()" class="single--input" placeholder="Full Name">
+    <p>{{ fullname }}</p>
+    <input class="single--input" placeholder="Ratings">
   </div>
 </div>
 <!-- <table class="table">
@@ -61,4 +62,4 @@
   </tbody>
 </table> -->
 
-<app-dashboard-table></app-dashboard-table>
+<app-dashboard-table (onSearchTextChange)="onSearch()"></app-dashboard-table>

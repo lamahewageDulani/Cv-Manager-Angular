@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { ColDef, IRowComp, ISetFilterParams } from 'ag-grid-community'; // Column Definitions Interface
 import { HttpClient } from '@angular/common/http';
 
@@ -26,6 +26,30 @@ interface userData {
 
 export class DashboardTableComponent {
   http: HttpClient = inject(HttpClient);
+
+  userDataa: userData[] = [];
+  filteredData = [];
+
+  @Input()
+  fullname1: string = '';
+  onSearch() {
+    if (this.fullname1 !== '') {
+        this.filteredData = this.userDataa.filter(item => item.fullName.toLowerCase().includes(this.fullname1.toLowerCase()));
+    } else {
+        this.filteredData = this.userDataa;
+    }
+}
+
+  fetchUserData() {
+    this.http.get<userData[]>('https://api-generator.retool.com/4v1405/data')
+    .subscribe((data) => {
+      this.userDataa = data;
+    });
+  }
+
+  YesNo(value: boolean): string {
+    return value ? 'Yes' : 'No';
+  }
 
   ngOnInit() {
     this.fetchUserData();
@@ -81,16 +105,4 @@ export class DashboardTableComponent {
     { field: 'rocket' },
   ];
 
-  userDataa: userData[] = [];
-
-  fetchUserData() {
-    this.http.get<userData[]>('https://api-generator.retool.com/4v1405/data')
-    .subscribe((data) => {
-      this.userDataa = data;
-    });
-  }
-
-  YesNo(value: boolean): string {
-    return value ? 'Yes' : 'No';
-  }
 }

@@ -15,10 +15,10 @@
         </tr>
     </thead>
     <tbody *ngFor="let item of userDataa">
-        <tr>
+        <tr *ngIf="fullname1 === '' || item.fullName.toLowerCase().includes(fullname1)">
             <td>{{ item.id }}</td>
             <td>{{ YesNo(item.isUser) }}</td>
-            <td>{{ item.fullName }}</td>
+            <td >{{ item.fullName }}</td>
         </tr>
     </tbody>
 </table>
