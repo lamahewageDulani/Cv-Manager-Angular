@@ -14,7 +14,7 @@
             <th>Full Name</th>
         </tr>
     </thead>
-    <tbody *ngFor="let item of userDataa">
+    <tbody *ngFor="let item of userDataa | dropdownfilter: isUser">
         <tr *ngIf="(fullname1 === '' || item.fullName.toLowerCase().includes(fullname1.toLowerCase())) && (userId1 === '' || item.id.toString().includes(userId1.toString()))">
             <td>{{ item.id }}</td>
             <td>{{ YesNo(item.isUser) }}</td>

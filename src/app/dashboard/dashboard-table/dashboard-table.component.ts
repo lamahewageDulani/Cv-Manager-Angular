@@ -28,7 +28,7 @@ interface userData {
 export class DashboardTableComponent {
   http: HttpClient = inject(HttpClient);
 
-  userDataa: userData[] = [];
+  public userDataa: userData[] = [];
   filteredData = [];
 
   fetchUserData() {
@@ -103,6 +103,6 @@ export class DashboardTableComponent {
   userId1: string = "";
 
   @Input()
-  isUser1: boolean = false;
+  isUser: string = "All";
 
 }

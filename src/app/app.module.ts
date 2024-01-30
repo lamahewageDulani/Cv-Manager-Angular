@@ -19,6 +19,7 @@ import { CommonModule } from '@angular/common';
 import { SidebarContentComponent } from './sidebar/sidebar-content/sidebar-content.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DropdownfilterPipe } from './pipes/dropdownfilter.pipe';
 
 const routes: Routes = [
   { path: 'Login', component: LoginComponent },
@@ -40,7 +41,8 @@ const routes: Routes = [
     DashboardTableComponent,
     AppComponent,
     FrontPageComponent,
-    SidebarContentComponent
+    SidebarContentComponent,
+    DropdownfilterPipe
   ],
   imports: [
     BrowserModule,

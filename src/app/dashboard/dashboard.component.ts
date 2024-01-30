@@ -7,9 +7,13 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+
+  ngOnInit() {
+    console.log(this.isUser);
+  }
   
   fullname: string = "";
   userId: string = ""; 
-  isUser: boolean = false;
+  isUser: string = "All"; 
 
 }

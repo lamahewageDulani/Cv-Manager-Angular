@@ -5,7 +5,11 @@
 <div class="input--fields">
   <div class="inputs">
     <input [(ngModel)]="userId" class="single--input" placeholder="User ID">
-    <input [(ngModel)]="isUser" class="single--input" placeholder="Is User">
+    <select [(ngModel)]="isUser" class="single--input">
+      <option value="All">All</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
   </div>
   <div class="inputs">
     <input [(ngModel)]="fullname" class="single--input" placeholder="Full Name">
@@ -13,4 +17,4 @@
   </div>
 </div>
 
-<app-dashboard-table [fullname1]="fullname" [userId1]="userId"></app-dashboard-table>
+<app-dashboard-table [fullname1]="fullname" [userId1]="userId" [isUser]="isUser"></app-dashboard-table>
