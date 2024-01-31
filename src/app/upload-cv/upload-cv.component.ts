@@ -24,8 +24,26 @@ export class UploadCvComponent implements OnInit{
     });
 
   }
+
+  // add to the local storage
+  user: any = {};
+
   onSubmit() {
     console.log(this.formVar.value);
+    this.user = Object.assign(this.user, this.formVar.value);
+    localStorage.setItem('user', JSON.stringify(this.user));
+    this.addUser(this.user);
+    alert('Your CV has been uploaded successfully');
+    this.formVar.reset();
+  }
+
+  addUser (user) {
+    let users = [];
+    if (localStorage.getItem('Users')) {
+      users = JSON.parse(localStorage.getItem('Users'));
+      users = [user, ...users];
+    }
+    localStorage.setItem('Users', JSON.stringify(users));
   }
 
   onSelected(value: string): void {

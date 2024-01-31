@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard',

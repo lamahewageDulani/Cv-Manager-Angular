@@ -13,7 +13,7 @@ interface IRow {
 }
 
 interface userData {
-[x: string]: any;
+  [x: string]: any;
   id: number;
   isUser: boolean;
   fullName: string;
