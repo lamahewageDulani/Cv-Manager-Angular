@@ -20,6 +20,7 @@ import { SidebarContentComponent } from './sidebar/sidebar-content/sidebar-conte
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownfilterPipe } from './pipes/dropdownfilter.pipe';
+import { UserserviceService } from './services/userservice.service';
 
 const routes: Routes = [
   { path: 'Login', component: LoginComponent },
@@ -56,7 +57,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UserserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

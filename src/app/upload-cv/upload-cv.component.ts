@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { UserserviceService } from '../services/userservice.service';
 
 @Component({
   selector: 'app-upload-cv',
@@ -10,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class UploadCvComponent implements OnInit{
   formVar!: FormGroup;
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private userService: UserserviceService) {}
 
   ngOnInit() {
     this.formVar = this.fb.group({
@@ -32,18 +33,9 @@ export class UploadCvComponent implements OnInit{
     console.log(this.formVar.value);
     this.user = Object.assign(this.user, this.formVar.value);
     localStorage.setItem('user', JSON.stringify(this.user));
-    this.addUser(this.user);
+    this.userService.addUser(this.user);
     alert('Your CV has been uploaded successfully');
     this.formVar.reset();
-  }
-
-  addUser (user) {
-    let users = [];
-    if (localStorage.getItem('Users')) {
-      users = JSON.parse(localStorage.getItem('Users'));
-      users = [user, ...users];
-    }
-    localStorage.setItem('Users', JSON.stringify(users));
   }
 
   onSelected(value: string): void {
